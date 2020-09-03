@@ -31,12 +31,28 @@ class ViewController: UIViewController {
     //Slider
    @IBAction func sliderValueChanged(_ sender: UISlider){
     print(sender.value)
-    }
+    let integerValue: Int = Int(sender.value)
+    sliderValueLabel.text = String(integerValue)
+}
     // UIButton Action
    @IBAction func touchUpHitButton(_ sender: UIButton) {
     print(slider.value)
+    let hitValue: Int = Int(slider.value)
+    slider.value = Float(hitValue)
     
+    
+    tryCount = tryCount + 1
+    tryCountLabel.text = "\(tryCount) / 5"
+    
+    if randomValue == hitValue {
+        print("YOU HIT!!")
     }
+    
+    if tryCount >= 5 {
+        print("you lose...")
+    }
+    
+}
     
     
     @IBAction func touchUpResetButton(_ sender: UIButton){
@@ -47,6 +63,17 @@ class ViewController: UIViewController {
     @IBAction func reset(){
         print("reseåt!")
         randomValue = Int.random(in: 0...30) // ...은 범위 연산자의 일종
+        print(randomValue)
+        tryCount = 0
+        tryCountLabel.text = "0 / 5"
+        slider.minimumValue = 0
+        slider.maximumValue = 30
+        slider.value = 15
+        minimumValueLabel.text = "0"
+        maximumValueLabel.text = "30"
+        sliderValueLabel.text = "15"
+        
+        
     }
 
 }
