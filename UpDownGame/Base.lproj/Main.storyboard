@@ -110,12 +110,16 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="maximumValueLabel" destination="Uoo-x8-lwf" id="ZYQ-Vn-OZj"/>
+                        <outlet property="minimumValueLabel" destination="rRu-1g-0cN" id="s91-n7-x4d"/>
                         <outlet property="slider" destination="b1p-Dd-vpO" id="Kmj-Cf-YrI"/>
+                        <outlet property="sliderValueLabel" destination="Ioy-vm-R9X" id="e9p-oU-kXI"/>
+                        <outlet property="tryCountLabel" destination="YMR-wH-RAJ" id="ORG-Fd-p1a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="152" y="-258"/>
+            <point key="canvasLocation" x="-58" y="-86"/>
         </scene>
     </scenes>
     <resources>
