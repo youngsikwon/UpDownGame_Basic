@@ -16,6 +16,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+    
+        //slider.setThumbImage(#imageLiteral(resourceName: T##String), for: .normal) //이미지 넣기
     }
     
     //Slider
