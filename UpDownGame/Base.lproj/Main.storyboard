@@ -22,8 +22,8 @@
                                     <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="svM-Eq-qQm"/>
                                 </connections>
                             </slider>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PQT-wc-DzQ">
-                                <rect key="frame" x="420" y="238" width="56" height="55"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PQT-wc-DzQ">
+                                <rect key="frame" x="425" y="242" width="56" height="55"/>
                                 <state key="normal" image="checkmark.seal.fill" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="large">
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
@@ -103,23 +103,22 @@
                             <constraint firstItem="Uoo-x8-lwf" firstAttribute="leading" secondItem="b1p-Dd-vpO" secondAttribute="trailing" constant="16" id="bqc-t6-wOA"/>
                             <constraint firstItem="Ioy-vm-R9X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eKb-oy-7dn"/>
                             <constraint firstItem="Uoo-x8-lwf" firstAttribute="centerY" secondItem="rRu-1g-0cN" secondAttribute="centerY" id="fh3-1B-jvC"/>
-                            <constraint firstItem="PQT-wc-DzQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jcs-W7-88m"/>
                             <constraint firstItem="b1p-Dd-vpO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="r3N-9G-kXI"/>
                             <constraint firstItem="TZX-wr-wPE" firstAttribute="centerY" secondItem="on8-Pb-GBO" secondAttribute="centerY" id="vHZ-EA-NIC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="maximumValueLabel" destination="Uoo-x8-lwf" id="ZYQ-Vn-OZj"/>
-                        <outlet property="minimumValueLabel" destination="rRu-1g-0cN" id="s91-n7-x4d"/>
-                        <outlet property="slider" destination="b1p-Dd-vpO" id="Kmj-Cf-YrI"/>
-                        <outlet property="sliderValueLabel" destination="Ioy-vm-R9X" id="e9p-oU-kXI"/>
-                        <outlet property="tryCountLabel" destination="YMR-wH-RAJ" id="ORG-Fd-p1a"/>
+                        <outlet property="maximumValueLabel" destination="Uoo-x8-lwf" id="0cQ-BI-7Na"/>
+                        <outlet property="minimumValueLabel" destination="rRu-1g-0cN" id="5Qs-SQ-Ikd"/>
+                        <outlet property="slider" destination="b1p-Dd-vpO" id="SPa-lx-o0b"/>
+                        <outlet property="sliderValueLabel" destination="Ioy-vm-R9X" id="FxR-78-JSH"/>
+                        <outlet property="tryCountLabel" destination="YMR-wH-RAJ" id="Emx-Pz-HAk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-58" y="-86"/>
+            <point key="canvasLocation" x="-286" y="-1475"/>
         </scene>
     </scenes>
     <resources>

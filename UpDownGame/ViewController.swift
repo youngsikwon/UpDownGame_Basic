@@ -13,8 +13,6 @@ class ViewController: UIViewController {
     
     var randomValue: Int = 0
     var tryCount: Int = 0
-    
-    
     @IBOutlet weak var slider: UISlider! // 스토리 보드에 연결된 요소 어노테이션.
     @IBOutlet weak var tryCountLabel: UILabel!
     @IBOutlet weak var sliderValueLabel: UILabel!
@@ -26,6 +24,22 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         //slider.setThumbImage(#imageLiteral(resourceName: T##String), for: .normal) //이미지 넣기
         reset()
+    }
+    
+    func showAlert(message: String){
+        
+        let alert = UIAlertController(title: nil,
+                                      message: message,
+                                      preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK",
+                                     style: .default) { (action) in
+                                        self.reset()
+        }
+        
+        alert.addAction(okAction)
+        present(alert,
+                animated: true,
+                completion: nil)
     }
     
     //Slider
@@ -45,11 +59,18 @@ class ViewController: UIViewController {
     tryCountLabel.text = "\(tryCount) / 5"
     
     if randomValue == hitValue {
-        print("YOU HIT!!")
-    }
-    
-    if tryCount >= 5 {
-        print("you lose...")
+        showAlert(message: "YOU HIT!!")
+        reset()
+    } else if tryCount >= 5 {
+       showAlert(message: "YOU lose...")
+        reset()
+    } else if randomValue > hitValue {
+        slider.minimumValue = Float(hitValue)
+        minimumValueLabel.text = String(hitValue)
+        
+    } else {
+        slider.maximumValue = Float(hitValue)
+        maximumValueLabel.text = String(hitValue)
     }
     
 }
@@ -72,8 +93,7 @@ class ViewController: UIViewController {
         minimumValueLabel.text = "0"
         maximumValueLabel.text = "30"
         sliderValueLabel.text = "15"
-        
-        
+
     }
 
 }
